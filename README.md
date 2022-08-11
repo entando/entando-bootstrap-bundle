@@ -1,1 +1,1 @@
-# entando-post-init-01
+# post-init-01

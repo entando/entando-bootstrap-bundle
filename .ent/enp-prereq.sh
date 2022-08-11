@@ -1,10 +1,13 @@
 #!/bin/bash
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-true
 
-_log_i() {
-  echo "true"
-}
+[ -f "./entando-project" ] && . ./entando-project
+[ -f "../entando-project" ] && . ../entando-project
 
-ENTANDO_OPT_DOCKER_ORG="entando"
+
+if ! type -t "_log_i"; then
+  _log_i() {
+    echo "> $@"
+  }
+fi
