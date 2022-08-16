@@ -10,7 +10,7 @@ cd ./tmp
 
 ENTANDO_CRANE_VERSION=v0.10.0
 curl -sL "https://github.com/google/go-containerregistry/releases/download/$ENTANDO_CRANE_VERSION/go-containerregistry_Linux_i386.tar.gz" \
-   | tar -zxf go-containerregistry_Linux_i386.tar.gz
+   | tar -zxv
 
 ./crane export "$ENTANDO_PRJ_SRC_BUNDLE_URL" | tar x descriptor.yaml
 sed -i "s/$ENTANDO_PRJ_SRC_BUNDLE_NAME/$ENTANDO_PRJ_NAME/" descriptor.yaml
