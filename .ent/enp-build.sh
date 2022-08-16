@@ -13,7 +13,7 @@ curl -sL "https://github.com/google/go-containerregistry/releases/download/$ENTA
    | tar -zxv
 
 ./crane export "$ENTANDO_PRJ_SRC_BUNDLE_URL" | tar x descriptor.yaml
-sed -i "s/$ENTANDO_PRJ_SRC_BUNDLE_NAME/$ENTANDO_PRJ_NAME/" descriptor.yaml
+sed -i "s/$ENTANDO_PRJ_SRC_BUNDLE_NAME/$ENTANDO_PRJ_BUNDLE_NAME/" descriptor.yaml
 
 {
   echo "FROM $ENTANDO_PRJ_SRC_BUNDLE_URL"
