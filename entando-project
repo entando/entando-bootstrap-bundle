@@ -12,4 +12,3 @@ ENTANDO_PRJ_IMAGE_NAME=entando-bootstrap-bundle
 ENTANDO_PRJ_SRC_BUNDLE_NAME="entando-ab-core-navigation"
 ENTANDO_PRJ_IMAGE_REGISTRY="registry.hub.docker.com"
 
-ENTANDO_PPL_CONFIG=release/7.1
