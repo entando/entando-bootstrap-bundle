@@ -39,7 +39,7 @@ jobs:
         run: source .ent/enp-prereq.sh
 
       - name: Setup GO
-      - uses: actions/setup-go@v4
+        uses: actions/setup-go@v4
         with:
           go-version: '1.20.6'
 
