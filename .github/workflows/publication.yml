@@ -49,9 +49,9 @@ jobs:
           curl -sL "https://github.com/google/go-containerregistry/releases/download/$ENTANDO_CRANE_VERSION/go-containerregistry_Linux_i386.tar.gz" \
             | tar -zxv
 
-          ENTANDO_PRJ_SRC_BUNDLE_URL="entando/entando-ab-core-navigation:pr-64"
-          ENTANDO_PRJ_SRC_BUNDLE_NAME="entando-ab-core-navigation"
-          ENTANDO_PRJ_BUNDLE_NAME=entando-epc-bootstrap
+          ENTANDO_PRJ_SRC_BUNDLE_URL=$(grep '^ENTANDO_PRJ_SRC_BUNDLE_URL=' ../entando-project | cut -d '=' -f 2)
+          ENTANDO_PRJ_SRC_BUNDLE_NAME=$(grep '^ENTANDO_PRJ_SRC_BUNDLE_NAME=' ../entando-project | cut -d '=' -f 2)
+          ENTANDO_PRJ_BUNDLE_NAME==$(grep '^ENTANDO_PRJ_BUNDLE_NAME=' ../entando-project | cut -d '=' -f 2)
 
           ./crane export "$ENTANDO_PRJ_SRC_BUNDLE_URL" | tar x descriptor.yaml
           sed -i "s/$ENTANDO_PRJ_SRC_BUNDLE_NAME/$ENTANDO_PRJ_BUNDLE_NAME/" descriptor.yaml
