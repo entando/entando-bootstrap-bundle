@@ -51,7 +51,7 @@ jobs:
 
           ENTANDO_PRJ_SRC_BUNDLE_URL=$(grep '^ENTANDO_PRJ_SRC_BUNDLE_URL=' ../entando-project | cut -d '=' -f 2)
           ENTANDO_PRJ_SRC_BUNDLE_NAME=$(grep '^ENTANDO_PRJ_SRC_BUNDLE_NAME=' ../entando-project | cut -d '=' -f 2)
-          ENTANDO_PRJ_BUNDLE_NAME==$(grep '^ENTANDO_PRJ_BUNDLE_NAME=' ../entando-project | cut -d '=' -f 2)
+          ENTANDO_PRJ_BUNDLE_NAME=$(grep '^ENTANDO_PRJ_BUNDLE_NAME=' ../entando-project | cut -d '=' -f 2)
 
           ./crane export "$ENTANDO_PRJ_SRC_BUNDLE_URL" | tar x descriptor.yaml
           sed -i "s/$ENTANDO_PRJ_SRC_BUNDLE_NAME/$ENTANDO_PRJ_BUNDLE_NAME/" descriptor.yaml
