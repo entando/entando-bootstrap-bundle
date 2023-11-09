@@ -1,6 +1,6 @@
 ENTANDO_PRJ_NAME=entando-bootstrap-bundle
 ENTANDO_PRJ_BUNDLE_NAME=entando-epc-bootstrap
-ENTANDO_PRJ_VERSION=1.0.1
+ENTANDO_PRJ_VERSION=1.0.3
 ENTANDO_PRJ_BUILD_COMMAND=.ent/enp-build.sh
 ENTANDO_PRJ_BUILD_DIR_PATH=out
 ENTANDO_PRJ_IMAGE_PUBLICATION_COMMAND=.ent/enp-publish.sh
@@ -12,4 +12,3 @@ ENTANDO_PRJ_IMAGE_NAME=entando-bootstrap-bundle
 ENTANDO_PRJ_SRC_BUNDLE_NAME="entando-ab-core-navigation"
 ENTANDO_PRJ_IMAGE_REGISTRY="registry.hub.docker.com"
 
-ENTANDO_PPL_CONFIG=release/7.1
